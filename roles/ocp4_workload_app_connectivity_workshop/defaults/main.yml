@@ -363,6 +363,8 @@ ocp4_workload_app_connectivity_workshop_ossm_jaeger_startingcsv: ""
 # Kiali
 ocp4_workload_app_connectivity_workshop_kiali_gitops_repo_path: platform/kiali
 
+ocp4_workload_app_connectivity_workshop_kiali_http_route_host: tracing-ui-tracing-system
+
 ocp4_workload_app_connectivity_workshop_ossm_kiali_channel: stable
 ocp4_workload_app_connectivity_workshop_ossm_kiali_startingcsv: ""
 ocp4_workload_app_connectivity_workshop_ossm_kiali_deployment: kiali-operator
@@ -377,9 +379,7 @@ ocp4_workload_app_connectivity_workshop_opentelemetry_product_wait_for_deploy: t
 ocp4_workload_app_connectivity_workshop_tempo_product_wait_for_deploy: true
 
 
-ocp4_workload_app_connectivity_workshop_opentelemetry_gitops_repo_path: platform/open-telemetry
-
-ocp4_workload_app_connectivity_workshop_tempo_gitops_repo_path: platform/tempo
+ocp4_workload_app_connectivity_workshop_tempo_gitops_repo_path: platform/tracing-system
 
 # ------------------------------------------------
 # Service Inteconnect

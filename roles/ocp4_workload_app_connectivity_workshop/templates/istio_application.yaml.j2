@@ -21,3 +21,6 @@ spec:
     repoURL: {{ ocp4_workload_app_connectivity_workshop_istio_gitops_repo }}
     targetRevision: {{ ocp4_workload_app_connectivity_workshop_istio_gitops_repo_tag }}
     path: {{ ocp4_workload_app_connectivity_workshop_istio_gitops_repo_path }}
+    helm:
+      values: |
+        tracingroute: {{ ocp4_workload_app_connectivity_workshop_kiali_http_route_host }}.{{ r_openshift_subdomain }}

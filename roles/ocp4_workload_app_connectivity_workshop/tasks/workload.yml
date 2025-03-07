@@ -48,6 +48,9 @@
 - name: Install rhsi.yaml
   ansible.builtin.include_tasks: rhsi.yml
 
+- name: Install Kiali
+  ansible.builtin.include_tasks: kiali.yml
+
 - name: Install tracing-system
   ansible.builtin.include_tasks: tracing-system.yml
 
