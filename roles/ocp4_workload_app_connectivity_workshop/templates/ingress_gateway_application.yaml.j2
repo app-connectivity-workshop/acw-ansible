@@ -56,3 +56,6 @@ spec:
         aws:
           accesskey: {{ ocp4_workload_app_connectivity_workshop_aws_access_key }}
           secretAccessKey: {{ ocp4_workload_app_connectivity_workshop_aws_secret_access_key }}
+        registry:
+          username: "{{ rh_registry_username|b64encode }}"
+          password: "{{ rh_registry_password|b64encode }}"
