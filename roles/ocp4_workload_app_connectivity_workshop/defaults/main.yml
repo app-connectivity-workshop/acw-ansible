@@ -181,7 +181,7 @@ ocp4_workload_app_connectivity_workshop_openshift_gitops_resource_customizations
 ocp4_workload_app_connectivity_workshop_openshift_gitops_ignore_differences: {}
 
 
-ocp4_workload_app_connectivity_workshop_gitops_repo: https://github.com/app-connectivity-workshop/helm.git
+ocp4_workload_app_connectivity_workshop_gitops_repo: https://github.com/app-connectivity-workshop/acw-helm.git
 ocp4_workload_app_connectivity_workshop_gitops_repo_tag: main
 
 # ------------------------------------------------
@@ -381,9 +381,22 @@ ocp4_workload_app_connectivity_workshop_opentelemetry_gitops_repo_path: platform
 
 ocp4_workload_app_connectivity_workshop_tempo_gitops_repo_path: platform/tempo
 
+# ------------------------------------------------
+# Service Inteconnect
+# ------------------------------------------------
 
+ocp4_workload_app_connectivity_workshop_rhsi_gitops_app: rhsi-system
 ocp4_workload_app_connectivity_workshop_rhsi_gitops_repo_path: platform/rhsi
 
+# ------------------------------------------------
+# Travels App
+# ------------------------------------------------
+
 ocp4_workload_app_connectivity_workshop_travel_portal_gitops_repo_path: developer/travel_portal
+ocp4_workload_app_connectivity_workshop_travel_portal_gitops_app: travel-portal
+
 ocp4_workload_app_connectivity_workshop_travel_control_gitops_repo_path: developer/travel_control
+ocp4_workload_app_connectivity_workshop_travel_control_gitops_app: travel-control
+
 ocp4_workload_app_connectivity_workshop_travel_agency_gitops_repo_path: developer/travel_agency
+ocp4_workload_app_connectivity_workshop_travel_agency_gitops_app: travel-agency

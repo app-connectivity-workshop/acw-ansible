@@ -33,8 +33,8 @@
 # - name: Install Service mesh  and Istio
 #   ansible.builtin.include_tasks: servicemesh.yml
 
-# - name: Install Ingress gateway
-#   ansible.builtin.include_tasks: ingress_gateway.yml
+- name: Install Ingress gateway
+  ansible.builtin.include_tasks: ingress-gateway.yml
 
 # - name: Install Observability
 #   ansible.builtin.include_tasks: observability.yaml
@@ -42,8 +42,8 @@
 # - name: Install Echo API Application
 #   ansible.builtin.include_tasks: echo_api.yml
 
-# - name: Install install_ossm3_demo.yaml
-#   ansible.builtin.include_tasks: install_ossm3_demo.yml
+# # - name: Install install_ossm3_demo.yaml
+# #   ansible.builtin.include_tasks: install_ossm3_demo.yml
 
 # - name: Install rhsi.yaml
 #   ansible.builtin.include_tasks: rhsi.yml
@@ -51,14 +51,14 @@
 # - name: Install tracing-system
 #   ansible.builtin.include_tasks: tracing-system.yml
 
-- name: Install travel_agency
-  ansible.builtin.include_tasks: travel_agency.yml
+# - name: Install travel_agency
+#   ansible.builtin.include_tasks: travel_agency.yml
 
-- name: Install travel_control
-  ansible.builtin.include_tasks: travel_control.yml
+# - name: Install travel_control
+#   ansible.builtin.include_tasks: travel_control.yml
 
-- name: Install travel_portal
-  ansible.builtin.include_tasks: travel_portal.yml
+# - name: Install travel_portal
+#   ansible.builtin.include_tasks: travel_portal.yml
 
 
 # - name: Patch Web Terminal template
