@@ -222,7 +222,7 @@ ocp4_workload_app_connectivity_workshop_servicemesh_operator_catalogsource_names
 # Istio
 # ------------------------------------------------
 
-ocp4_workload_app_connectivity_workshop_istio_application_name: istio
+ocp4_workload_app_connectivity_workshop_istio_application_name: istio-system
 ocp4_workload_app_connectivity_workshop_istio_application_namespace: istio-system
 ocp4_workload_app_connectivity_workshop_istio_gitops_repo: "{{ ocp4_workload_app_connectivity_workshop_gitops_repo }}"
 ocp4_workload_app_connectivity_workshop_istio_gitops_repo_tag: main
@@ -377,6 +377,9 @@ ocp4_workload_app_connectivity_workshop_ossm_servicemesh_startingcsv: ""
 
 ocp4_workload_app_connectivity_workshop_opentelemetry_product_wait_for_deploy: true
 ocp4_workload_app_connectivity_workshop_tempo_product_wait_for_deploy: true
+
+ocp4_workload_app_connectivity_workshop_opentelemetry_gitops_repo_path: platform/opentelemetry
+
 
 
 ocp4_workload_app_connectivity_workshop_tempo_gitops_repo_path: platform/tracing-system

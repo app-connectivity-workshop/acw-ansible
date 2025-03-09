@@ -54,6 +54,9 @@
 - name: Install tracing-system
   ansible.builtin.include_tasks: tracing-system.yml
 
+- name: Install tracing-system
+  ansible.builtin.include_tasks: opentelemetrycollector.yml
+
 - name: Install travel_agency
   ansible.builtin.include_tasks: travel_agency.yml
 
