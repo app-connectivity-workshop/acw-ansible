@@ -66,6 +66,9 @@
 - name: Install travel_portal
   ansible.builtin.include_tasks: travel_portal.yml
 
+- name: Install partner-blue-portal
+  ansible.builtin.include_tasks: partner-blue-portal.yml
+
 
 - name: Patch Web Terminal template
   ansible.builtin.include_tasks: webterminal_image.yml
