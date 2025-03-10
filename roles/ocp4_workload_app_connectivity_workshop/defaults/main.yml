@@ -391,12 +391,6 @@ ocp4_workload_app_connectivity_workshop_tempo_gitops_repo_path: platform/tracing
 ocp4_workload_app_connectivity_workshop_rhsi_gitops_app: rhsi-system
 ocp4_workload_app_connectivity_workshop_rhsi_gitops_repo_path: platform/rhsi
 
-# ------------------------------------------------
-# Travels App
-# ------------------------------------------------
-
-ocp4_workload_app_connectivity_workshop_travel_db_gitops_app: travel-db
-ocp4_workload_app_connectivity_workshop_travel_db_gitops_repo_path: developer/travel-agency-db
 
 # ------------------------------------------------
 # Travels App
