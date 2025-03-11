@@ -42,9 +42,6 @@
 - name: Install Echo API Application
   ansible.builtin.include_tasks: echo_api.yml
 
-# - name: Install install_ossm3_demo.yaml
-#   ansible.builtin.include_tasks: install_ossm3_demo.yml
-
 - name: Install rhsi.yaml
   ansible.builtin.include_tasks: rhsi.yml
 
