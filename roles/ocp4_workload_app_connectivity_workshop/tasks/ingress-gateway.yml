@@ -41,3 +41,12 @@
   kubernetes.core.k8s:
     state: present
     definition: "{{ lookup('template', 'ingress_gateway_application.yaml.j2') | from_yaml }}"
+  retries: 10
+  delay: 30
+  ignore_errors: true
+  register: ingress_gateway_application_result
+  until: ingress_gateway_application_result is not failed
+
+- name: Print ingress_gateway_application_result from the previous task
+  ansible.builtin.debug:
+    var: ingress_gateway_application_result
