@@ -15,8 +15,8 @@
 - name: Install OpenShift Gitops
   ansible.builtin.include_tasks: openshift_gitops.yml
 
-- name: Install and Setup Web Terminal
-  ansible.builtin.include_tasks: webterminal.yml
+# - name: Install and Setup Web Terminal
+#   ansible.builtin.include_tasks: webterminal.yml
 
 - name: Install Kiali
   ansible.builtin.include_tasks: Kiali.yml
@@ -51,8 +51,8 @@
 - name: Install Travels
   ansible.builtin.include_tasks: travel.yml
 
-- name: Patch Web Terminal template
-  ansible.builtin.include_tasks: webterminal_image.yml
+# - name: Patch Web Terminal template
+#   ansible.builtin.include_tasks: webterminal_image.yml
 
 - name: Install Showroom
   ansible.builtin.include_tasks: showroom.yml
