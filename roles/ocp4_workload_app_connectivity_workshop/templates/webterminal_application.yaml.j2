@@ -2,14 +2,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kiali-system
+  name: webterminal
   namespace: {{ ocp4_workload_app_connectivity_workshop_argocd_namespace }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: kiali-system
+    namespace: workshop-operators
   project: default
   syncPolicy:
     automated:
@@ -20,8 +20,9 @@ spec:
       - CreateNamespace=true
   source:
     repoURL: {{ ocp4_workload_app_connectivity_workshop_gitops_repo }}
-    targetRevision: {{ ocp4_workload_app_connectivity_workshop_gitops_repo_tag }}
-    path: {{ ocp4_workload_app_connectivity_workshop_kiali_gitops_repo_path }}
+    targetRevision: {{ ocp4_workload_app_connectivity_workshop_webterminal_gitops_repo_tag }}
+    path: {{ ocp4_workload_app_connectivity_workshop_webterminal_gitops_repo_path }}
     helm:
       values: |
-        
+        webterminal-operator:
+          

@@ -15,14 +15,11 @@
 - name: Install OpenShift Gitops
   ansible.builtin.include_tasks: openshift_gitops.yml
 
-- name: Install Cert Manager
-  ansible.builtin.include_tasks: cert-manager.yml
+- name: Install and Setup Web Terminal
+  ansible.builtin.include_tasks: webterminal.yml
 
-- name: Install Web Terminal operator
-  ansible.builtin.include_tasks: webterminal_operator.yml
-
-- name: Install Operators
-  ansible.builtin.include_tasks: operators.yml
+- name: Install Kiali
+  ansible.builtin.include_tasks: Kiali.yml
 
 - name: Install Kuadrant
   ansible.builtin.include_tasks: kuadrant.yml
