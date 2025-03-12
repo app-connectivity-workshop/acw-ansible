@@ -3,7 +3,7 @@
 - name: Setup webterminal
   kubernetes.core.k8s:
     state: present
-    definition: "{{ lookup('template', 'webterminal.yaml.j2') | from_yaml }}"
+    definition: "{{ lookup('template', 'webterminal_application.yaml.j2') | from_yaml }}"
   retries: 10
   delay: 30
   ignore_errors: true
@@ -13,6 +13,7 @@
 - name: Print webterminal_result from the previous task
   ansible.builtin.debug:
     var: webterminal_result
+
 
 - name: Patch DevworkspaceTemplate for web terminal tooling
   kubernetes.core.k8s_json_patch:

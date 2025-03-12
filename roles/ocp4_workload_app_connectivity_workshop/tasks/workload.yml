@@ -45,26 +45,14 @@
 - name: Install tracing-system
   ansible.builtin.include_tasks: tracing-system.yml
 
-- name: Install tracing-system
-  ansible.builtin.include_tasks: opentelemetrycollector.yml
+- name: Install opentelemetry
+  ansible.builtin.include_tasks: opentelemetry.yml
 
-- name: Install travel_agency
-  ansible.builtin.include_tasks: travel_agency.yml
-
-- name: Install travel_control
-  ansible.builtin.include_tasks: travel_control.yml
-
-- name: Install travel_portal
-  ansible.builtin.include_tasks: travel_portal.yml
-
-- name: Install partner-blue-portal
-  ansible.builtin.include_tasks: partner-blue-portal.yml
-
+- name: Install Travels
+  ansible.builtin.include_tasks: travel.yml
 
 - name: Patch Web Terminal template
   ansible.builtin.include_tasks: webterminal_image.yml
 
-
 - name: Install Showroom
   ansible.builtin.include_tasks: showroom.yml
-

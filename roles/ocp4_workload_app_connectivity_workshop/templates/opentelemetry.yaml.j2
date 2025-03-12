@@ -2,14 +2,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: opentelemetrycollector
+  name: opentelemetry
   namespace: {{ ocp4_workload_app_connectivity_workshop_argocd_namespace }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: opentelemetrycollector
+    namespace: opentelemetry
   project: default
   syncPolicy:
     automated:
