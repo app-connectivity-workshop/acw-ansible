@@ -1,0 +1,17 @@
+---
+
+- name: Install Kiali
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('template', 'kiali_application.yaml.j2') | from_yaml }}"
+  retries: 10
+  delay: 30
+  ignore_errors: true
+  register: kiali_result
+  until: kiali_result is not failed
+
+- name: Print kiali_result from the previous task
+  ansible.builtin.debug:
+    var: kiali_result
+
+
