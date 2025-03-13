@@ -22,17 +22,18 @@
 # - name: Install Kiali System
 #   ansible.builtin.include_tasks: kiali-system.yml
 
-- name: Install istio-system
-  ansible.builtin.include_tasks: istio-system.yml
+# - name: Install Service Mesh
+#   ansible.builtin.include_tasks: servicemesh.yml
 
-# - name: Install Gateway API
-#   ansible.builtin.include_tasks: gateway.yml
+# - name: Install Istio
+#   ansible.builtin.include_tasks: istio.yml
+
 
 # - name: Install opentelemetry
 #   ansible.builtin.include_tasks: opentelemetry.yml
 
-# - name: Install tracing-system/tempo
-#   ansible.builtin.include_tasks: tracing-system.yml
+- name: Install tracing-system and empo
+  ansible.builtin.include_tasks: tracing-system.yml
 
 # - name: Install Kuadrant
 #   ansible.builtin.include_tasks: kuadrant.yml

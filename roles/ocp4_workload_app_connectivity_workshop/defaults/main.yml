@@ -212,15 +212,15 @@ ocp4_workload_app_connectivity_workshop_gateway_operator_gitops_repo_path: platf
 
 
 # ------------------------------------------------
-# Sail Operator
+# Service Mesh Operator
 # ------------------------------------------------
 
 
-ocp4_workload_app_connectivity_workshop_servicemesh_operator_application_name: servicemesh-operator
-ocp4_workload_app_connectivity_workshop_servicemesh_operator_application_namespace: servicemesh
+ocp4_workload_app_connectivity_workshop_servicemesh_operator_application_name: servicemesh-system
+ocp4_workload_app_connectivity_workshop_servicemesh_operator_application_namespace: servicemesh-system
 ocp4_workload_app_connectivity_workshop_servicemesh_operator_gitops_repo: "{{ ocp4_workload_app_connectivity_workshop_gitops_repo }}"
 ocp4_workload_app_connectivity_workshop_servicemesh_operator_gitops_repo_tag: ops
-ocp4_workload_app_connectivity_workshop_servicemesh_operator_gitops_repo_path: platform/servicemesh
+ocp4_workload_app_connectivity_workshop_servicemesh_operator_gitops_repo_path: platform/servicemesh-system
 
 ocp4_workload_app_connectivity_workshop_servicemesh_operator_operator_channel: 
 ocp4_workload_app_connectivity_workshop_servicemesh_operator_operator_install_plan_approval: Automatic
@@ -380,7 +380,7 @@ ocp4_workload_app_connectivity_workshop_ossm_servicemesh_startingcsv: ""
 ocp4_workload_app_connectivity_workshop_opentelemetry_product_wait_for_deploy: true
 ocp4_workload_app_connectivity_workshop_tempo_product_wait_for_deploy: true
 
-ocp4_workload_app_connectivity_workshop_opentelemetry_gitops_repo_path: platform/opentelemetry
+ocp4_workload_app_connectivity_workshop_opentelemetry_gitops_repo_path: platform/opentelemetrycollector
 
 
 
