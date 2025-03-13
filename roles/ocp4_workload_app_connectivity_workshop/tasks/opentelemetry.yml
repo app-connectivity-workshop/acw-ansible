@@ -1,0 +1,54 @@
+---
+
+# ---- Open Telemetry Operator (opentelemetry-product)
+
+- name: install opentelemetry-product operator
+  ansible.builtin.include_role:
+    name: install_operator
+  vars:
+    install_operator_name: opentelemetry-product
+    install_operator_channel: "stable"
+    install_operator_starting_csv: ""
+    install_operator_catalogsource_setup: false
+    install_operator_catalogsource_image: ""
+    install_operator_catalogsource_image_tag: ""
+    install_operator_csv_nameprefix: opentelemetry-operator
+
+- name: Wait until the operator is up and running
+  when: ocp4_workload_app_connectivity_workshop_opentelemetry_product_wait_for_deploy | bool
+  kubernetes.core.k8s_info:
+    api_version: apps/v1
+    kind: deployment
+    name: opentelemetry-operator-controller-manager
+    namespace: openshift-operators
+  register: r_opentelemetry_deployment
+  retries: 40
+  delay: 15
+  until:
+    - r_opentelemetry_deployment.resources is defined
+    - r_opentelemetry_deployment.resources | length | int > 0
+    - r_opentelemetry_deployment.resources[0].status.availableReplicas is defined
+    - r_opentelemetry_deployment.resources[0].status.availableReplicas | int == r_opentelemetry_deployment.resources[0].spec.replicas | int
+    - r_opentelemetry_deployment is not failed
+  ignore_errors: true
+
+- name: Print r_opentelemetry_deployment from the previous task
+  ansible.builtin.debug:
+    var: r_opentelemetry_deployment
+
+
+# ---- Setup opentelemetrycollector
+
+- name: Setup opentelemetrycollector
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('template', 'opentelemetrycollector.yaml.j2') | from_yaml }}"
+  retries: 10
+  delay: 30
+  ignore_errors: true
+  register: opentelemetrycollector_result
+  until: opentelemetrycollector_result is not failed
+
+- name: Print opentelemetrycollector_result from the previous task
+  ansible.builtin.debug:
+    var: opentelemetrycollector_result
