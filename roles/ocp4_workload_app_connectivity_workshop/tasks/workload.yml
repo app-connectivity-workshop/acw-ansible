@@ -32,30 +32,24 @@
 # - name: Install opentelemetry
 #   ansible.builtin.include_tasks: opentelemetry.yml
 
-- name: Install tracing-system and empo
-  ansible.builtin.include_tasks: tracing-system.yml
+# - name: Install tracing-system and empo
+#   ansible.builtin.include_tasks: tracing-system.yml
 
 # - name: Install Kuadrant
 #   ansible.builtin.include_tasks: kuadrant.yml
-
-# - name: Install rhsi.yaml
-#   ansible.builtin.include_tasks: rhsi.yml
-
-# - name: Install Observability
-#   ansible.builtin.include_tasks: observability.yaml
 
 # - name: Install Ingress gateway
 #   ansible.builtin.include_tasks: ingress-gateway.yml
 
 
+# - name: Install Observability
+#   ansible.builtin.include_tasks: observability.yaml
+
 # - name: Install Echo API Application
 #   ansible.builtin.include_tasks: echo_api.yml
 
-# - name: Install travel_agency
-#   ansible.builtin.include_tasks: travel_agency.yml
-
-# - name: Install travel_control
-#   ansible.builtin.include_tasks: travel_control.yml
+# - name: Install rhsi.yaml
+#   ansible.builtin.include_tasks: rhsi.yml
 
 # - name: Install Travels
 #   ansible.builtin.include_tasks: travel.yml
@@ -63,11 +57,11 @@
 # - name: Install partner-blue-portal
 #   ansible.builtin.include_tasks: partner-blue-portal.yml
 
-# - name: Install Web Terminal operator
-#   ansible.builtin.include_tasks: webterminal_operator.yml
+- name: Install Web Terminal operator
+  ansible.builtin.include_tasks: webterminal_operator.yml
 
-# - name: Patch Web Terminal template
-#   ansible.builtin.include_tasks: webterminal_image.yml
+- name: Patch Web Terminal template
+  ansible.builtin.include_tasks: webterminal_image.yml
 
 
 # - name: Install Showroom
