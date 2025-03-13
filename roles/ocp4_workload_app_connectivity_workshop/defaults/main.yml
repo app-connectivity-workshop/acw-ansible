@@ -302,6 +302,37 @@ ocp4_workload_app_connectivity_workshop_webterminal_operator_catalogsource_names
 ocp4_workload_app_connectivity_workshop_webterminal_operator_catalog_snapshot_image: ""
 ocp4_workload_app_connectivity_workshop_webterminal_operator_catalog_snapshot_image_tag: ""
 
+# ------------------------------------------------
+# Devspaces Operator
+# ------------------------------------------------
+
+ocp4_workload_app_connectivity_workshop_devspaces_operator_channel: ""
+ocp4_workload_app_connectivity_workshop_devspaces_operator_starting_csv: ""
+ocp4_workload_app_connectivity_workshop_devspaces_operator_wait_for_deploy: true
+ocp4_workload_app_connectivity_workshop_devspaces_operator_name: devspaces
+ocp4_workload_app_connectivity_workshop_devspaces_operator_catalog_source: redhat-operators
+ocp4_workload_app_connectivity_workshop_devspaces_operator_deployment: devspaces-operator
+ocp4_workload_app_connectivity_workshop_devspaces_operator_namespace: openshift-operators
+ocp4_workload_app_connectivity_workshop_devspaces_operator_use_catalog_snapshot: false
+ocp4_workload_app_connectivity_workshop_devspaces_operator_catalogsource_name: redhat-operators-snapshot-amq-streams
+ocp4_workload_app_connectivity_workshop_devspaces_operator_catalog_snapshot_image: quay.io/gpte-devops-automation/olm_snapshot_redhat_catalog
+ocp4_workload_app_connectivity_workshop_devspaces_operator_catalog_snapshot_image_tag: "v4.6_2021_05_10"
+
+
+# ------------------------------------------------
+# Devspaces
+# ------------------------------------------------
+
+ocp4_workload_app_connectivity_workshop_devspaces_name: devspaces
+ocp4_workload_app_connectivity_workshop_devspaces_namespace: devspaces
+ocp4_workload_app_connectivity_workshop_devspaces_user_namespace_prefix: devspaces
+ocp4_workload_app_connectivity_workshop_devspaces_user_namespace: devspaces-user
+ocp4_workload_app_connectivity_workshop_devspaces_template_name: che-code-workspace
+ocp4_workload_app_connectivity_workshop_devspaces_devworkspace_name: app-connectivity-workshop
+ocp4_workload_app_connectivity_workshop_devspaces_project_git: https://github.com/app-connectivity-workshop/workshop-devspaces.git
+ocp4_workload_app_connectivity_workshop_devspaces_project_name: workshop-devspaces
+ocp4_workload_app_connectivity_workshop_devspaces_tools_image: quay.io/cloud-architecture-workshop/devspaces-image:0e90287
+
 
 # ------------------------------------------------
 # Showroom
@@ -373,7 +404,7 @@ ocp4_workload_app_connectivity_workshop_opentelemetry_gitops_repo_path: platform
 
 
 
-ocp4_workload_app_connectivity_workshop_tracing_gitops_repo_path: platform/tracing-system
+ocp4_workload_app_connectivity_workshop_tracing_gitops_repo_path: platform/tracing
 
 # ------------------------------------------------
 # Service Inteconnect
@@ -386,6 +417,10 @@ ocp4_workload_app_connectivity_workshop_rhsi_gitops_repo_path: platform/rhsi
 # ------------------------------------------------
 # Travels App
 # ------------------------------------------------
+
+
+ocp4_workload_app_connectivity_workshop_travels_gitops_repo_path: developer/travels
+ocp4_workload_app_connectivity_workshop_travels_gitops_app: travels
 
 ocp4_workload_app_connectivity_workshop_travel_portal_gitops_repo_path: developer/travel_portal
 ocp4_workload_app_connectivity_workshop_travel_portal_gitops_app: travel-portal

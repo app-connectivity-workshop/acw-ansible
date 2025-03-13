@@ -18,6 +18,12 @@ spec:
     syncOptions:
       - ApplyOutOfSyncOnly=true
       - CreateNamespace=true
+      - RespectIgnoreDifferences=true
+  ignoreDifferences:
+    - group: opentelemetry.io
+      kind: OpenTelemetryCollector
+      jsonPointers:
+      - /spec/config/service/pipelines/traces/processors
   source:
     repoURL: {{ ocp4_workload_app_connectivity_workshop_gitops_repo }}
     targetRevision: {{ ocp4_workload_app_connectivity_workshop_gitops_repo_tag }}
@@ -26,5 +32,5 @@ spec:
       values: |
         opentelemetry-collector:
           replicaCount: 1
-        opentelemetry-operator
+        opentelemetry-operator:
           
