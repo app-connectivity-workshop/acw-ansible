@@ -29,5 +29,3 @@
 - name: Print observability_worker_application_result from the previous task
   ansible.builtin.debug:
     var: observability_worker_application_result
-
-
