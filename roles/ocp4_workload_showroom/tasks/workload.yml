@@ -98,15 +98,15 @@
   ansible.builtin.include_tasks:
     file: report-variables.yaml
 
-# - name: Report Variables to user_data (multi user)
-#   when: _showroom_user_data.users is defined
-#   vars:
-#     _showroom_user: "{{ _showroom_users_item.key }}"
-#     _showroom_namespace: "{{ ocp4_workload_showroom_namespace }}-{{ _showroom_user }}"
-#     _showroom_vars: "{{ _showroom_users_item.value | combine({'guid': guid, 'user': _showroom_user}) }}"
-#   ansible.builtin.include_tasks:
-#     file: report-variables.yaml
-#   loop: "{{ _showroom_user_data.users | dict2items }}"
-#   loop_control:
-#     loop_var: _showroom_users_item
-#     label: "{{ _showroom_users_item.key }}"
+- name: Report Variables to user_data (multi user)
+  when: _showroom_user_data.users is defined
+  vars:
+    _showroom_user: "{{ _showroom_users_item.key }}"
+    _showroom_namespace: "{{ ocp4_workload_showroom_namespace }}-{{ _showroom_user }}"
+    _showroom_vars: "{{ _showroom_users_item.value | combine({'guid': guid, 'user': _showroom_user}) }}"
+  ansible.builtin.include_tasks:
+    file: report-variables.yaml
+  loop: "{{ _showroom_user_data.users | dict2items }}"
+  loop_control:
+    loop_var: _showroom_users_item
+    label: "{{ _showroom_users_item.key }}"
