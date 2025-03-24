@@ -1,0 +1,15 @@
+---
+
+- name: Setup travels-web
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('template', 'travels-web.yaml.j2') | from_yaml }}"
+  retries: 10
+  delay: 30
+  ignore_errors: true
+  register: travels_web_result
+  until: travels_web_result not failed
+
+- name: Print travels_web_result from the previous task
+  ansible.builtin.debug:
+    var: travels_web_result
