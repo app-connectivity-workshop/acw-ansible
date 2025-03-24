@@ -50,14 +50,14 @@
 - name: Install Travels
   ansible.builtin.include_tasks: travel.yml
 
-- name: Install travels-web
-  ansible.builtin.include_tasks: travels-web.yml
+- name: Install travel-web
+  ansible.builtin.include_tasks: travel-web.yml
 
 - name: Install Web Terminal operator
   ansible.builtin.include_tasks: webterminal.yml
 
-- name: Install and setup Devspaces
-  ansible.builtin.include_tasks: devspaces.yml
+# - name: Install and setup Devspaces
+#   ansible.builtin.include_tasks: devspaces.yml
 
-- name: Install Showroom
-  ansible.builtin.include_tasks: showroom.yml
+# - name: Install Showroom
+#   ansible.builtin.include_tasks: showroom.yml
