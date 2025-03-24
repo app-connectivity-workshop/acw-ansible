@@ -56,8 +56,5 @@
 - name: Install Web Terminal operator
   ansible.builtin.include_tasks: webterminal.yml
 
-# - name: Install and setup Devspaces
-#   ansible.builtin.include_tasks: devspaces.yml
-
 # - name: Install Showroom
 #   ansible.builtin.include_tasks: showroom.yml
