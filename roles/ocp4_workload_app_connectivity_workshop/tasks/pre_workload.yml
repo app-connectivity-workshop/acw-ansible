@@ -30,14 +30,6 @@
   ansible.builtin.set_fact:
     r_openshift_subdomain: "{{ r_openshift_ingress_controller.resources[0].status.domain }}"
 
-
-- name: Create usernames
-  ansible.builtin.set_fact:
-    r_app_connectivity_workshop_users: |
-       {{ r_app_connectivity_workshop_users | default([]) + [ocp4_workload_app_connectivity_workshop_user_prefix + item | string] }}
-  loop: "{{ range(1, ((ocp4_workload_app_connectivity_workshop_user_count | int) + 1)) | list }}"
-
-
 - name: Get API server URL
   kubernetes.core.k8s_info:
     api_version: config.openshift.io/v1
